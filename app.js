@@ -147,7 +147,7 @@ const triggerConfetti = () => {
     return;
   }
 
-  const colors = ['#3aa7ff', '#ff9a5a', '#6ed9b7', '#ffd66b'];
+  const colors = ['#caa56b', '#7b233c', '#d9cfbf', '#3c465f'];
   const count = 120;
   for (let i = 0; i < count; i += 1) {
     confettiPieces.push({
