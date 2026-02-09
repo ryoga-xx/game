@@ -1,18 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Deep Dive icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Deep Dive wineglass icon">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#e8f6ff"/>
-      <stop offset="1" stop-color="#ffffff"/>
+      <stop offset="0" stop-color="#0f111a"/>
+      <stop offset="1" stop-color="#1b1f2a"/>
     </linearGradient>
-    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3aa7ff"/>
-      <stop offset="1" stop-color="#6ed9b7"/>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0e7d8"/>
+      <stop offset="1" stop-color="#d9cfbf"/>
     </linearGradient>
   </defs>
   <rect width="512" height="512" rx="96" fill="url(#bg)"/>
-  <circle cx="256" cy="256" r="172" fill="#ffffff" opacity="0.9"/>
-  <circle cx="256" cy="256" r="176" fill="none" stroke="url(#ring)" stroke-width="18"/>
-  <circle cx="320" cy="200" r="16" fill="#ff9a5a"/>
-  <circle cx="190" cy="320" r="12" fill="#ffd66b"/>
-  <text x="256" y="288" text-anchor="middle" font-size="140" font-family="sans-serif" font-weight="700" fill="#1f2a44">DD</text>
+
+  <path d="M176 120 C176 220 220 276 256 300 C292 276 336 220 336 120" fill="none" stroke="url(#glass)" stroke-width="16" stroke-linecap="round"/>
+  <path d="M204 168 C210 222 232 252 256 266 C280 252 302 222 308 168" fill="#7b233c" opacity="0.85"/>
+  <rect x="246" y="300" width="20" height="92" rx="8" fill="url(#glass)"/>
+  <rect x="196" y="392" width="120" height="18" rx="9" fill="url(#glass)"/>
+
+  <circle cx="332" cy="146" r="8" fill="#caa56b"/>
 </svg>
