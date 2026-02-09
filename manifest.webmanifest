@@ -1,0 +1,18 @@
+{
+  "name": "Deep Dive",
+  "short_name": "Deep Dive",
+  "description": "Conversation game for deeper connections.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7fbff",
+  "theme_color": "#3aa7ff",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

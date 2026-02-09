@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deep Dive</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#3aa7ff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Deep Dive" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <section id="title-screen" class="screen active">
+        <div class="hero">
+          <div class="pill">Conversation Game</div>
+          <h1>Deep Dive</h1>
+          <p class="subtitle">共通点探しゲームからスタートして、自然に深い会話へ。</p>
+          <button id="start-btn" class="btn primary">共通点探しゲーム：START</button>
+          <button id="skip-btn" class="btn ghost">スキップしてDeep Diveへ</button>
+          <p class="note">まずは5分で10個の共通点を探そう！</p>
+        </div>
+      </section>
+
+      <section id="phase0-screen" class="screen">
+        <header class="topbar">
+          <div class="counter">Matches: <span id="match-count">0</span> / 10</div>
+          <button id="end-game-btn" class="btn ghost">ゲーム終了</button>
+        </header>
+        <div class="mission">まずは5分で10個の共通点を探そう！</div>
+        <div id="question-card" class="card">
+          <div class="card-label">Phase 0</div>
+          <div id="card-text" class="card-text"></div>
+          <div id="binary-choices" class="binary">
+            <span id="choice-a" class="choice">A</span>
+            <span class="vs">vs</span>
+            <span id="choice-b" class="choice">B</span>
+          </div>
+          <div class="tap-hint">タップで次へ</div>
+        </div>
+        <button id="match-btn" class="btn match">一緒！（Match!）</button>
+      </section>
+
+      <section id="mode-screen" class="screen">
+        <div class="mode-wrap">
+          <h2>Deep Dive モード選択</h2>
+          <p class="subtitle">相手との距離感に合わせて選んでください。</p>
+          <div class="mode-grid">
+            <button class="btn mode" data-mode="合コン">合コン</button>
+            <button class="btn mode" data-mode="親友">親友</button>
+            <button class="btn mode" data-mode="カップル">カップル</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="deepdive-screen" class="screen deep">
+        <header class="topbar">
+          <div class="counter">Mode: <span id="mode-label">-</span></div>
+          <div class="counter">Lv <span id="level-label">1</span></div>
+          <button id="back-to-modes" class="btn ghost">モード変更</button>
+        </header>
+        <div id="deep-card" class="card deep">
+          <div class="card-label">Deep Dive</div>
+          <div id="deep-text" class="card-text"></div>
+          <div class="tap-hint">タップで次へ</div>
+        </div>
+      </section>
+
+      <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-content">
+          <h3>Congratulations! 気が合いますね！</h3>
+          <p>相性バッチリ。もう少し深い話へ進みましょう。</p>
+          <button id="to-modes" class="btn primary">Deep Diveへ</button>
+        </div>
+      </div>
+
+      <canvas id="confetti-canvas"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
